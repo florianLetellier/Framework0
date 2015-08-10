@@ -1,0 +1,28 @@
+{% extends "::base.html.twig" %}
+{% block title %}{{ parent() }}{% endblock %}
+{% block stylesheets %}
+	{{ parent() }}
+{% endblock %}
+{% block body %}
+	<header>
+	    <div class="sticky-nav">
+	    	<a id="mobile-nav" class="menu-nav"></a>
+	        <nav id="menu">
+	        	<ul id="menu-nav">
+	            	<li><a href="index.html">Home</a></li>
+	                <li><a href="">Log in</a></li>
+	                <li><a href="SigIn.html">Sign in</a></li>
+	            </ul>
+	        </nav>
+		</div>
+	</header>
+	{% for utilisateur in users %}
+		<p>l'adresse email:<br/>
+		     {{ utilisateur.email }}<br/>
+		le mot de passe:<br/>
+		    {{ utilisateur.pass }}</p><br/>
+	{% endfor %}
+	{% block javascripts %}
+		{{ parent() }}
+	{% endblock %}
+{% endblock %}

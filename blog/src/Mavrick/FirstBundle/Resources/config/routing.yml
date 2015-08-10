@@ -1,0 +1,7 @@
+first_homepage:
+    path:     /index.{format}
+    defaults: { _controller: FirstBundle:Default:index, format: html }
+
+first_SigIn:
+    path:     /SigIn.{format}
+    defaults: { _controller: FirstBundle:Default:ajouter, format: html }

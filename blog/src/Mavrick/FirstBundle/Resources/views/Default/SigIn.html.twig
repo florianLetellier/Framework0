@@ -1,0 +1,29 @@
+{% extends "::base.html.twig" %}
+{% block title %}{{ parent() }}{% endblock %}
+{% block stylesheets %}
+	{{ parent() }}
+{% endblock %}
+{% block body %}
+	<header>
+	    <div class="sticky-nav">
+	    	<a id="mobile-nav" class="menu-nav"></a>
+	        <nav id="menu">
+	        	<ul id="menu-nav">
+	            	<li><a href="index.html">Home</a></li>
+	                <li><a href="">Log in</a></li>
+	                <li><a href="">Sign in</a></li>
+	            </ul>
+	        </nav>
+		</div>
+	</header>
+
+	<h1>Ajouter un utilisateur</h1>
+	<form action="{{ path('first_SigIn') }}" method="POST">
+		{{ form_widget(form) }}
+		<input type="submit" />
+	</form>
+
+	{% block javascripts %}
+		{{ parent() }}
+	{% endblock %}
+{% endblock %}
